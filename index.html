@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>나의 포트폴리오2023</title>
+    <style>
+      .snow {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: pink;
+        animation: snowfall 5s linear infinite;
+    }
+
+      @keyframes snowfall {
+          to {
+              transform: translateY(100vh);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <header>
+          <h3>2023 웹표준 수업 과제물 정리_Andrea</h3>          
+      </header>
+      <nav class="menu">
+        <ul>
+          <li><a href="sub1/sub1.html" target="_blank">Hongdae Clubs</a></li>
+          <li><a href="sub2/sub2.html" target="_blank">Patrón</a></li>
+          <li><a href="sub3/sub3.html" target="_blank">Twenty One Pilots</a></li>
+          <li><a href="sub4/sub4.html" target="_blank">Bad Bunny</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        My Portfolio
+      </main>
+
+      <footer>
+        maded by Andrea Garcia in 2023. &nbsp;&nbsp;&nbsp; HP 010-4644-3609 &nbsp;&nbsp;&nbsp;  email : andrevgarcias@kbu.ac.kr 
+      </footer>
+
+      <script>
+        
+          document.addEventListener("mousemove", (event) => {
+          createSnowflake(event.clientX, event.clientY);
+        });
+
+        function createSnowflake(x, y) {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snow";
+            snowflake.style.left = `${x}px`;
+            snowflake.style.top = `${y}px`;
+            document.body.appendChild(snowflake);
+
+            
+            snowflake.addEventListener("animationiteration", () => {
+                snowflake.remove();
+            });
+        }
+      </script>
+
+    </div>
+  </body>
+</html>

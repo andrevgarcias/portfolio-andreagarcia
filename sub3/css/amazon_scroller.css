@@ -1,0 +1,42 @@
+
+.amazon_scroller {
+	position: absolute; top:250px; left: 140px;
+	float: left;
+	width: 3000px; height: 0px;
+	z-index: 11;
+}
+
+.amazon_scroller .amazon_scroller_nav li{
+    cursor: pointer;
+}
+
+.amazon_scroller .amazon_scroller_mask{
+    position: absolute; left: 0px;
+    overflow: hidden;
+	margin: 0px 0px;
+	border: red solid 0px;
+}
+
+.amazon_scroller ul li{
+    padding: 0px;
+	margin-left: 4px;
+    margin-right: 28px;
+	list-style: none;
+    float: left;    
+}
+.amazon_scroller ul li:hover{
+    background-color:#e5378e;
+} 
+
+
+.main_silver_roling_left {z-index: 1;
+	position: absolute;
+	top: 150px;
+}
+.main_silver_roling_left :hover {background:url('../img/roling_left_over.jpg') no-repeat 0 0;transition:all 0.4s; z-index: 2;}
+
+.main_silver_roling_right { z-index: 1;
+	position: absolute;
+	top: 150px; left: 1569px;
+}
+.main_silver_roling_right :hover {background:url('../img/roling_right_over.jpg') no-repeat 0 0;transition:all 0.4s; z-index: 2;}
